@@ -1,7 +1,23 @@
-<!DOCTYPE html>
 <html>
+<head></head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+ <script src="https://hdsupplyfm--hdsfull.sandbox.my.salesforce-sites.com/lightning/lightning.out.js"></script>
+
+<div id="lightningLocator"></div> 
+
+<script>
+    $Lightning.use("c:embedFlowInExternalWebsiteApp",
+        function() {
+            $Lightning.createComponent(
+                "c:embedFlowInExternalWebsite",
+                { },                  
+                "lightningLocator",  
+                function(cmp) {}
+            );
+        },
+        'https://hdsupplyfm--hdsfull.sandbox.my.salesforce-sites.com/'
+    );
+</script>
+
 </body>
 </html>
