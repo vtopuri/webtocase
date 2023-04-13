@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-TEST WEB TO CASE
- <script src="https://hdsupplyfm--hdsfull.sandbox.my.salesforce-sites.com/WebtoCase/lightning/lightning.out.js"></script>
-
-<div id="lightningLocator"></div> 
-
+<head>
+<script src="https://hdsupplyfm--hdsfull.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-    $Lightning.use("c:embedFlowInExternalWebsiteApp",
-        function() {
-            $Lightning.createComponent(
-                "c:embedFlowInExternalWebsite",
-                { },                  
-                "lightningLocator",  
-                function(cmp) {}
-            );
-        },
-        'https://hdsupplyfm--hdsfull.sandbox.my.salesforce-sites.com/WebtoCase/'
-    );
+	function init(){
+		$Lightning.use("c:embedFlowInExternalWebsiteApp",
+			function() {
+				$Lightning.createComponent(
+					"c:embedFlowInExternalWebsite",
+					{ },                  
+					"lightningLocator",  
+					function(cmp) {}
+				);
+			},
+			'https://hdsfull-hdsupply.cs218.force.com/WebtoCase'
+		);
+	}
 </script>
-
+</head>
+<body onload="init()>
+	TEST WEB TO CASE
+	<div id="lightningLocator"></div> 
 </body>
 </html>
