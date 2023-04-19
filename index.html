@@ -11,11 +11,11 @@
     <script src="https://hdsupplyfm--hdsfull.sandbox.my.salesforce.com/lightning/lightning.out.js"></script>
     <script>
       $Lightning.use(
-        'c:embedFlowInExternalWebsiteApp', // name of the Lightning app
+        'c:hdsWebtoCaseLtngOutApp', // name of the Lightning app
         function () {
           // Callback once framework and app loaded
           $Lightning.createComponent(
-            'c:embedFlowInExternalWebsite', // top-level component of your app
+            'c:hdsWebtoCaseLtngOut', // top-level component of your app
             {}, // attributes to set on the component when created
             'lightningout', // the DOM location to insert the component
             function (cmp) {
